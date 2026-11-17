@@ -34,10 +34,10 @@ jobs:
           set -euo pipefail
 
           IMAGE="ghcr.io/${GITHUB_REPOSITORY,,}"
-          TIMESTAMP=$(date -u +'%Y%m%d-%H%M')
+          DATE=$(date -u +'%Y%m%d')
 
           # Unique even when the same workflow is rerun.
-          VERSION="${TIMESTAMP}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          VERSION="${DATE}-${GITHUB_RUN_NUMBER}-${GITHUB_RUN_ATTEMPT}"
 
           echo "image=$IMAGE" >> "$GITHUB_OUTPUT"
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"

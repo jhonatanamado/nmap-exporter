@@ -1,5 +1,5 @@
 CONTAINER_RT ?= podman
-REPO ?= slaclab/nmap-exporter
+REPO ?= jhonatanamado/nmap-exporter
 TAG ?= latest
 
 venv:
